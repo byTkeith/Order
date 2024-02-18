@@ -10,11 +10,10 @@ public class Order {
         int comparator=0;
         int i;
         for(i=0;i<splitBySpace.length;i++){
-            if(){
-                int result=splitBySpace[i].compareTo(splitBySpace[i+1]);
-                if(result<0){
-                    comparator++;
-                }
+            if(splitBySpace[i].compareTo(splitBySpace[i+1])<0 && i<=splitBySpace.length && i+1<splitBySpace.length ){
+               
+                comparator++;
+                
             }    
         }
 
