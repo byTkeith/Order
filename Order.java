@@ -5,7 +5,7 @@ public class Order {
     /*
      * method to separate the line into strings and check if the words are in sequence
      */
-    public static int Processor(String eachLine){
+    public static void Processor(String eachLine){
         String[] splitBySpace=eachLine.split(" ");
         int comparator=0;
         int conditionFactor=1;
@@ -17,8 +17,11 @@ public class Order {
             
         }
         System.out.println("the following has a condition factor of "+conditionFactor);
+        if(conditionFactor==comparator){
+            System.out.println();
+        }
 
-        return comparator;
+        //return comparator;
 
     }
     public static void main(String[] args) {
@@ -42,9 +45,9 @@ public class Order {
             }
         }
         for(String sepLines: fileContents){
-            int toBeProcessed=Processor(sepLines);
-            System.out.println("the number of words in sequence "+toBeProcessed+" strings");
-
+            
+            Processor(sepLines);
+           
         }
     }
     
