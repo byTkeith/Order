@@ -2,8 +2,23 @@ import java.io.*;
 import java.util.*;
 
 public class Order {
-    public static String Processor(String eachLine){
-        return eachLine;
+    /*
+     * method to separate the line into strings and check if the words are in sequence
+     */
+    public static int Processor(String eachLine){
+        String[] splitBySpace=eachLine.split(" ");
+        int comparator=0;
+        int i;
+        for(i=0;i<splitBySpace.length;i++){
+            if(){
+                int result=splitBySpace[i].compareTo(splitBySpace[i+1]);
+                if(result<0){
+                    comparator++;
+                }
+            }    
+        }
+
+        return comparator;
 
     }
     public static void main(String[] args) {
@@ -27,7 +42,8 @@ public class Order {
             }
         }
         for(String sepLines: fileContents){
-            String toBeProcessed=Processor(sepLines);
+            int toBeProcessed=Processor(sepLines);
+            System.out.println("there are "+toBeProcessed+" strings in sequence");
 
         }
     }
