@@ -9,12 +9,14 @@ public class Order {
         String[] splitBySpace=eachLine.split(" ");
         int comparator=0;
         int i;
-        for(i=0;i<splitBySpace.length;i++){
-            if(splitBySpace[i].compareTo(splitBySpace[i+1])<0 && i<=splitBySpace.length && i+1<splitBySpace.length ){
-               
+        for(i=0;i<eachLine.length()-1;i++){
+           
+            if(splitBySpace[i].compareTo(splitBySpace[i+1])<0){
+            
                 comparator++;
-                
-            }    
+
+            } 
+                  
         }
 
         return comparator;
