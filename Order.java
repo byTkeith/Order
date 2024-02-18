@@ -9,8 +9,12 @@ public class Order {
         String[] splitBySpace=eachLine.split(" ");
         int comparator=0;
         int i;
-       
-        comparator=splitBySpace.length;
+        for(i=0; i<(splitBySpace.length)-1;i++){
+            if(splitBySpace[i].compareTo(splitBySpace[i+1])<0){
+                comparator++;
+            }
+            
+        }
 
         return comparator;
 
@@ -37,7 +41,7 @@ public class Order {
         }
         for(String sepLines: fileContents){
             int toBeProcessed=Processor(sepLines);
-            System.out.println("there are "+toBeProcessed+" strings in sequence");
+            System.out.println("the number of words in sequence "+toBeProcessed+" strings");
 
         }
     }
