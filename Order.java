@@ -18,6 +18,9 @@ public class Order {
         }
         System.out.println("the following has a condition factor of "+conditionFactor);
         if(conditionFactor==comparator){
+            System.out.println("Multiple solutions length "+comparator+".");
+        }
+        else if(conditionFactor==1){
             System.out.println();
         }
 
