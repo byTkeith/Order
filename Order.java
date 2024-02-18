@@ -8,13 +8,15 @@ public class Order {
     public static int Processor(String eachLine){
         String[] splitBySpace=eachLine.split(" ");
         int comparator=0;
+        int conditionFactor=1;
         int i;
         for(i=0; i<(splitBySpace.length)-1;i++){
             if(splitBySpace[i].compareTo(splitBySpace[i+1])<0){
                 comparator++;
-            }
+            }else{conditionFactor++;}
             
         }
+        System.out.println("the following has a condition factor of "+conditionFactor);
 
         return comparator;
 
